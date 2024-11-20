@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Your Fitness Dashboard</h1>
+    <table border="1">
+        <tr>
+            <th>Date</th>
+            <th>Activity</th>
+            <th>Duration (minutes)</th>
+            <th>Calories Burned</th>
+        </tr>
+        {% for activity in activities %}
+        <tr>
+            <td>{{ activity.date }}</td>
+            <td>{{ activity.activity }}</td>
+            <td>{{ activity.duration }}</td>
+            <td>{{ activity.calories }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/">Back to Home</a>
+</body>
+</html>
